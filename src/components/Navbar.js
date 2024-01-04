@@ -3,7 +3,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 
+
+
 const CustomNavbar = () => {
+  
   return ( 
     <Navbar expand="lg" className="bg-black">
       <Container>
@@ -11,11 +14,11 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end py-2">
           <Nav className="mr-auto ">
-            <Nav.Link href="#home" className="text-white">Home</Nav.Link>
-            <Nav.Link href="#about" className="text-white">About</Nav.Link>
-            <Nav.Link href="#service" className="text-white">Service</Nav.Link>
-            <Nav.Link href="#skills" className="text-white">Skills</Nav.Link>
-            <Nav.Link href="#contact" className="text-white">Contact</Nav.Link>
+            <Nav.Link href="#home" className="text-white fw-bold"  >Home</Nav.Link>
+            <Nav.Link href="#about" className="text-white fw-bold">About</Nav.Link>
+            <Nav.Link href="#service" className="text-white fw-bold">Service</Nav.Link>
+            <Nav.Link href="#skills" className="text-white fw-bold">Skills</Nav.Link>
+            <Nav.Link href="#contact" className="text-white fw-bold">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
