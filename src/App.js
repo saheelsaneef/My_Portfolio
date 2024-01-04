@@ -3,7 +3,7 @@ import './App.css';
 import CustomNavbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import Service from './components/Service';
+import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 
@@ -16,7 +16,7 @@ function App() {
       <CustomNavbar/>
       <Home/>
       <About/>
-      <Service/>
+      <Projects/>
       <Skills/>
       <Contact/>
     </div>

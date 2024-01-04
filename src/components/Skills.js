@@ -1,6 +1,6 @@
 const Skills = () => {
     return (
-        <h3>Skills</h3>
+        <h3 className="text-center mt-5">Skills</h3>
       );
 }
  
