@@ -5,10 +5,8 @@ const Home = () => {
 
     const name = "Saheel Saneef";
     
-    
     return ( 
         <div>
-           
             <Container>
             <p className='fs-4  mb-0'>Hello my name is</p>
             <p className="fs-1 fw-bold mb-0">{name}</p>

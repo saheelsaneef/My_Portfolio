@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 const CustomNavbar = () => {
   return ( 
     
-    <Navbar expand="lg" className="bg-black">
+    <Navbar expand="lg" className="bg-black ">
       <Container>
         <Navbar.Brand href="#home" className="text-white fs-2 fw-bold ">SaHe<span className='text-danger'>eL.</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -17,7 +17,7 @@ const CustomNavbar = () => {
             <Nav.Link href="About.js" className="text-white fw-bold">About</Nav.Link>
             <Nav.Link href="service.js" className="text-white fw-bold">Projects</Nav.Link>
             <Nav.Link href="#skills" className="text-white fw-bold">Skills</Nav.Link>
-            <Nav.Link href="Contact.js" className="text-white fw-bold">Contact</Nav.Link>
+            <Nav.Link href="/Users/a.ssaneef/Documents/saheel/src/components/Contact.js" className="text-white fw-bold">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
