@@ -11,8 +11,8 @@ const Home = () => {
         <div className='bg-black vh-100 d-flex align-items-center '>
             <Container >
                 <h1 className='fs-2 text-white mb-3'>Hello my name is</h1>
-                <p className="fs-1 text-white fw-bold mb-3">{name}</p>
-                <p className='fs-3 text-white'>And I'm an <span className='text-danger fw-bold'>Undergraduate</span> </p>
+                <h1 className="fw-bold text-white mb-3" style={{ fontSize: '75px' }}>{name}</h1>
+                <p className='text-white'style={{ fontSize: '35px' }}>And I'm an <span className='text-danger fw-bold'>Undergraduate</span> </p>
             </Container>
         </div>
         
