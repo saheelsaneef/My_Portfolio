@@ -3,6 +3,7 @@ import { Navbar,Nav,Container } from 'react-bootstrap';
 
 const NavBar = () => {
  
+
   return ( 
     <Navbar expand="lg" className= "bg-black" sticky='top' >
       <Container>
