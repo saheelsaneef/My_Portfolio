@@ -1,12 +1,28 @@
-
+import React, { useState, useEffect } from 'react';
 import { Navbar,Nav,Container } from 'react-bootstrap';
+
 
 const NavBar = () => {
  
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return ( 
-    <Navbar expand="lg" className= "bg-black" sticky='top' >
+    <Navbar expand="lg" className= {scrolled ? 'bg-danger' : 'bg-black'} sticky='top' >
       <Container>
-        <Navbar.Brand href="#home" className="text-white fs-2 fw-bold ">SaHe<span className='text-danger'>eL.</span></Navbar.Brand>
+        <Navbar.Brand href="#home" className="text-white fs-2 fw-bold ">SaHe<span className={scrolled ? 'text-white' : 'text-danger'}>eL.</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end ">
           <Nav className="mr-auto ">
