@@ -5,6 +5,8 @@ import planetOne from '../Assets/planet.svg';
 import planetTwo from '../Assets/planet-2.svg';
 import planetThree from '../Assets/planet-3.svg';
 import planetFour from '../Assets/planet-4.svg';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 
 
@@ -24,6 +26,35 @@ const Home = () => {
     config: { duration: 1200 },
   });
 
+  const Image = styled(motion.img)`
+  position:absolute;
+  width:100%;
+  height:100%;
+  max-width:150px;
+  max-height:150px;
+
+    &:nth-child(1) {
+      top: 90px;
+      right: 1px;
+    }
+
+    &:nth-child(2) {
+       top: 220px;
+       right: 120px; 
+    }
+
+    &:nth-child(3) {
+       bottom: 230px; 
+       right: 30px;
+    }
+
+    &:nth-child(4) {
+       bottom: 100px; 
+       right: 160px; 
+    }
+
+  `;
+
   return (
     <div className='bg-black vh-100 d-flex align-items-center'>
       <Container>
@@ -37,14 +68,14 @@ const Home = () => {
           And I'm an <span className='text-danger fw-bold' >Undergraduate</span>
         </animated.p>
       </Container>
-      <Container>
-      <img src={planetOne} alt='planet'></img>
-      <img src={planetTwo} alt='planet two'></img>
-      <img src={planetThree} alt='planet two'></img>
-      <img src={planetFour} alt='planet two'></img>
+      
+      <Container className='d-flex align-items-center '>
+        <Image src={planetOne} alt='planet One' whileTap={{ scale: 0.9 }}/>
+        <Image src={planetTwo} alt='planet Two'whileTap={{ scale: 0.9 }}/>
+        <Image src={planetThree} alt='planet Three' whileTap={{ scale: 0.9 }}/>
+        <Image src={planetFour} alt='planet Four' whileTap={{ scale: 0.9 }}/>
       </Container>
     </div>
-
   );
 };
 
