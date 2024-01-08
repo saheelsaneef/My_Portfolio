@@ -30,27 +30,27 @@ const Home = () => {
   position:absolute;
   width:100%;
   height:100%;
-  max-width:150px;
-  max-height:150px;
+  max-width:250px;
+  max-height:250px;
 
     &:nth-child(1) {
       top: 90px;
-      right: 1px;
+      right: 30px;
     }
 
     &:nth-child(2) {
        top: 220px;
-       right: 120px; 
+       right: 430px; 
     }
 
     &:nth-child(3) {
-       bottom: 230px; 
-       right: 30px;
+       bottom: 170px; 
+       right: 50px;
     }
 
     &:nth-child(4) {
-       bottom: 100px; 
-       right: 160px; 
+       bottom: 30px; 
+       right: 280px; 
     }
 
   `;
@@ -70,10 +70,10 @@ const Home = () => {
       </Container>
       
       <Container className='d-flex align-items-center '>
-        <Image src={planetOne} alt='planet One' whileTap={{ scale: 0.9 }}/>
-        <Image src={planetTwo} alt='planet Two'whileTap={{ scale: 0.9 }}/>
-        <Image src={planetThree} alt='planet Three' whileTap={{ scale: 0.9 }}/>
-        <Image src={planetFour} alt='planet Four' whileTap={{ scale: 0.9 }}/>
+        <Image src={planetOne} alt='planet One' whileTap={{ scale: 0.9 }} drag={true} dragConstraints={{top:-100,right:0,left:-1200,bottom:450}}/>
+        <Image src={planetTwo} alt='planet Two'whileTap={{ scale: 0.9 }} drag={true} dragConstraints={{top:-230,right:400,left:-800,bottom:350}}/>
+        <Image src={planetThree} alt='planet Three' whileTap={{ scale: 0.9 }} drag={true} dragConstraints={{top:-350,right:100,left:-1200,bottom:200}}/>
+        <Image src={planetFour} alt='planet Four' whileTap={{ scale: 0.9 }} drag={true}  dragConstraints={{top:-450,right:400,left:-1000,bottom:100}}/>
       </Container>
     </div>
   );
