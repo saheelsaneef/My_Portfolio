@@ -1,6 +1,11 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useSpring, animated } from 'react-spring';
+import planetOne from '../Assets/planet.svg';
+import planetTwo from '../Assets/planet-2.svg';
+import planetThree from '../Assets/planet-3.svg';
+import planetFour from '../Assets/planet-4.svg';
+
 
 
 const Home = () => {
@@ -31,9 +36,15 @@ const Home = () => {
         <animated.p className='text-white' style={{ fontSize: '35px', ...fadeInAnimation }}>
           And I'm an <span className='text-danger fw-bold' >Undergraduate</span>
         </animated.p>
-        
+      </Container>
+      <Container>
+      <img src={planetOne} alt='planet'></img>
+      <img src={planetTwo} alt='planet two'></img>
+      <img src={planetThree} alt='planet two'></img>
+      <img src={planetFour} alt='planet two'></img>
       </Container>
     </div>
+
   );
 };
 
