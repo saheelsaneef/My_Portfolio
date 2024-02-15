@@ -19,6 +19,14 @@ const NavBar = () => {
     };
   }, []);
 
+  const navItems = [
+    { title: 'Home', href: '#home' },
+    { title: 'About', href: '#about' },
+    { title: 'Projects', href: '#service' },
+    { title: 'Skills', href: '#skills' },
+    { title: 'Contact', href: '#contact' }
+  ];
+
   return ( 
     <Navbar expand="lg" className= {scrolled ? 'bg-danger' : 'bg-black'} sticky='top' >
       <Container>
@@ -26,11 +34,9 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end ">
           <Nav className="mr-auto ">
-            <Nav.Link href="#home" className="text-white fs-5 fw-bold " >Home</Nav.Link>
-            <Nav.Link href="#about" className="text-white fs-5 fw-bold ">About</Nav.Link>
-            <Nav.Link href="#service" className="text-white fs-5 fw-bold">Projects</Nav.Link>
-            <Nav.Link href="#skills" className="text-white fs-5 fw-bold">Skills</Nav.Link>
-            <Nav.Link href="#contact" className="text-white fs-5 fw-bold">Contact</Nav.Link>
+            {navItems.map((item, index) => (
+              <Nav.Link key={index} href={item.href} className="text-white fs-5 fw-bold">{item.title}</Nav.Link>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -40,3 +46,4 @@ const NavBar = () => {
 }
  
 export default NavBar;
+
